@@ -1,490 +1,258 @@
-# 🏛️Development of Digital Subsidy & Grant Administration Platform
 <div align="center">
 
-[![Java](https://img.shields.io/badge/Java-17-ED8B00?style=flat-square&logo=java)](https://www.java.com/)
-[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.0-6DB33F?style=flat-square&logo=spring-boot)](https://spring.io/projects/spring-boot)
-[![React](https://img.shields.io/badge/React-19.2.7-61DAFB?style=flat-square&logo=react)](https://reactjs.org/)
-[![Vite](https://img.shields.io/badge/Vite-8.1.1-646CFF?style=flat-square&logo=vite)](https://vitejs.dev/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
+# 🏛️ Digital Subsidy & Grant Administration Platform
 
-A comprehensive full-stack government subsidy management platform built with modern technologies for transparent, multi-level approval workflows and beneficiary tracking.
+<p align="center">
+  <b>A Transparent, Multi-Tier Government Subsidy Management & Beneficiary Tracking System</b>
+</p>
 
-[Features](#-features) • [Tech Stack](#-tech-stack) • [Quick Start](#-quick-start) • [Architecture](#-architecture) • [API Docs](#-api-documentation)
+[![Java 17](https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.java.com/)
+[![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.2.0-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
+[![React](https://img.shields.io/badge/React-19.2.7-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-8.1.1-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Security](https://img.shields.io/badge/Spring_Security-JWT-005F87?style=for-the-badge&logo=jsonwebtokens&logoColor=white)](https://jwt.io/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
+
+<br />
+
+[Features](#-key-features) • [Tech Stack](#-tech-stack) • [Quick Start](#-quick-start) • [Role Portals](#-role-portals--demo-credentials) • [Architecture](#-architecture) • [API Reference](#-api-reference)
+
+---
 
 </div>
 
----
-
 ## 📋 Overview
 
-The **Government Subsidy & Grant Disbursement Tracking System** is an enterprise-grade web application designed to streamline government subsidy disbursement processes. It provides a transparent, multi-tier approval workflow system that enables citizens to apply for subsidies while government officers can verify, review, and approve applications at different administrative levels.
+The **Government Subsidy & Grant Disbursement Tracking System** is an enterprise-grade full-stack web application designed to streamline government subsidy disbursement processes. It provides a transparent, multi-tier approval workflow system that enables citizens to apply for subsidies while government officers can verify, review, and approve applications across various administrative levels.
 
-### Key Use Cases
-- 👥 **Citizens** browse schemes, submit applications, and track their status
-- 🔍 **Field Officers** perform ground-level verification
-- 📊 **District Officers** conduct secondary scrutiny
-- 💰 **Finance Officers** approve final disbursement
-- 🛡️ **Administrators** manage schemes and monitor system analytics
+> [!NOTE]
+> This platform ensures end-to-end accountability, real-time application lifecycle tracking, automated eligibility calculation, and role-restricted disbursement processing.
 
 ---
 
-## ✨ Features
+## ✨ Key Features
 
-### 🎯 Core Functionality
-- **Multi-Role Access Control**: Distinct portals for citizens, field officers, district officers, finance officers, and administrators
-- **Application Lifecycle Management**: Complete workflow from submission through approval to disbursement
-- **Real-Time Status Tracking**: Visual workflow stepper for application progress monitoring
-- **Dynamic Scheme Catalog**: Browse, filter, and manage government subsidy schemes
-- **Eligibility Scoring**: Automatic eligibility calculation based on beneficiary information
-- **Beneficiary Profiles**: Manage citizen profiles with role-specific information
+### 👥 Role-Based Portals & Access Control
+* **Citizen / Beneficiary**: Browse scheme catalogs, check eligibility, submit subsidy applications, upload verification documents, and track approval status.
+* **Field Officer (Level 1)**: Conduct ground-level physical & document verification and provide preliminary recommendations.
+* **District Officer (Level 2)**: Secondary scrutiny of field reports, application evaluation, and district-level approval.
+* **Finance Officer (Level 3)**: Final financial validation, budget allocation check, and grant disbursement authorization.
+* **System Administrator**: Manage subsidy schemes, configure eligibility rules, assign roles, and monitor system metrics.
 
-### 🔐 Security & Authentication
-- JWT-based stateless authentication
-- Spring Security with role-based access control (RBAC)
-- Secure password hashing and validation
-- CORS protection and API security best practices
+---
 
-### 📱 User Experience
-- Responsive React SPA with modern UI/UX
-- Role-based dashboard customization
-- Comprehensive form validation (client & server-side)
-- Intuitive navigation with Sidebar and Navbar components
-- Loading states and error handling
+### 🛡️ Core System Capabilities
 
-### 📊 Analytics & Reporting
-- Dashboard statistics and metrics
-- Application analytics by status and scheme
-- Scheme utilization reports
-- Export functionality (Excel, PDF)
-- Real-time data visualization
+| Feature Category | Highlights |
+| :--- | :--- |
+| 🔄 **Workflow Stepper** | Visual interactive lifecycle tracker for beneficiaries to view live application state |
+| 📊 **Analytics Dashboard** | Real-time charts, scheme utilization metrics, and regional status distribution reports |
+| 🔒 **Enterprise Security** | Stateless JWT authentication, Spring Security RBAC, BCrypt password encryption, CORS protection |
+| ⚡ **Modern UX** | Responsive React 19 single-page application (SPA), instant searching & dynamic filtering |
+| 📄 **Document Management** | Upload and review supporting proofs with audit logs for re-verification requests |
+| 📈 **Export System** | Generate scheme utilization summaries and application reports |
 
 ---
 
 ## 🛠️ Tech Stack
 
-### Backend
-| Component | Technology |
-|-----------|-----------|
-| **Language** | Java 17 |
-| **Framework** | Spring Boot 3.2.0 |
-| **Web Layer** | Spring Web MVC |
-| **Persistence** | Spring Data JPA + Hibernate |
-| **Security** | Spring Security + JWT |
-| **Database** | H2 (default) / MySQL (configurable) |
-| **Build Tool** | Maven 3.6+ |
-| **Testing** | JUnit 5, Spring Boot Test, MockMvc |
+<div align="center">
 
-### Frontend
-| Component | Technology |
-|-----------|-----------|
-| **Library** | React 19.2.7 |
-| **Build Tool** | Vite 8.1.1 |
-| **Routing** | React Router DOM 7.18.1 |
-| **Styling** | CSS3 + Custom Properties |
-| **Icons** | React Icons 5.7.0 |
-| **HTTP Client** | Fetch API |
-| **Package Manager** | npm |
+### Backend (Java Spring Boot)
 
-### DevOps & Tools
-- Maven Wrapper (mvnw)
-- Vite development server
-- Spring Boot embedded Tomcat
-- Git version control
+| Layer / Module | Technology | Version / Specification |
+| :--- | :--- | :--- |
+| **Language** | Java OpenJDK | `17` |
+| **Framework** | Spring Boot | `3.2.0` |
+| **Web API** | Spring Web MVC | RESTful Architecture |
+| **Data Persistence** | Spring Data JPA | Hibernate ORM |
+| **Security Layer** | Spring Security | Stateless JWT Authentication |
+| **Database Engine** | H2 Database (In-Memory) / MySQL | Configurable |
+| **Build & Dependencies** | Maven / Maven Wrapper | `3.6+` (`mvnw`) |
+| **Automated Testing** | JUnit 5, Spring Boot Test | MockMvc |
+
+<br />
+
+### Frontend (React + Vite)
+
+| Layer / Module | Technology | Version / Specification |
+| :--- | :--- | :--- |
+| **UI Library** | React | `19.2.7` |
+| **Build System** | Vite | `8.1.1` |
+| **Routing** | React Router DOM | `7.18.1` |
+| **Styling Engine** | Modern CSS3 | Custom Tokens & Responsive Grid |
+| **Iconography** | React Icons | `5.7.0` |
+| **HTTP Client** | Native Fetch API | Custom Service Abstraction Layer |
+
+</div>
 
 ---
 
-## 📋 Prerequisites
+## 🔑 Role Portals & Demo Credentials
 
-Before running the project, ensure you have:
+Use the pre-configured accounts below to log in and test different system workflow tiers:
 
-- **Java 17** or higher ([Download](https://www.oracle.com/java/technologies/downloads/#java17))
-- **Node.js 16+** and npm 7+ ([Download](https://nodejs.org/))
-- **Git** for version control
-- **Maven 3.6+** (or use the included Maven Wrapper)
+| Role | Email | Password | Assigned Dashboard | Primary Responsibility |
+| :--- | :--- | :--- | :--- | :--- |
+| 👨‍💼 **Admin** | `admin@gov.in` | `Password@123` | `/admin` | Manage schemes, system config & analytics |
+| 🔍 **Field Officer** | `field.officer@gov.in` | `Password@123` | `/field-officer` | Ground verification & preliminary review |
+| 📋 **District Officer** | `district.officer@gov.in` | `Password@123` | `/district-officer` | Level 2 scrutiny & administrative approval |
+| 💵 **Finance Officer** | `finance.officer@gov.in` | `Password@123` | `/finance-officer` | Level 3 final fund disbursement |
+| 👤 **Beneficiary** | `citizen@gov.in` | `Password@123` | `/dashboard` | Submit applications & track status |
 
 ---
 
 ## 🚀 Quick Start
 
-### 1️⃣ Clone the Repository
+### Prerequisites
+Make sure you have installed:
+* **Java 17 Development Kit (JDK 17+)** — [Download](https://www.oracle.com/java/technologies/downloads/#java17)
+* **Node.js (v16+)** & **npm (v7+)** — [Download](https://nodejs.org/)
+* **Git** version control tool — [Download](https://git-scm.com/)
+
+---
+
+### 1️⃣ Clone Repository
 ```bash
-git clone https://github.com/yourusername/govt-subsidy-g2.git
-cd govt-subsidy-g2
+git clone https://github.com/Shaik-Shafi-01/Govt-Subsidy.git
+cd Govt-Subsidy
 ```
 
-### 2️⃣ Setup Backend (Java Spring Boot)
-
+### 2️⃣ Launch Backend (Spring Boot Service)
 ```bash
-# Build the project
-mvn clean package
-
-# Run the Spring Boot application
-mvn spring-boot:run
-# OR using Maven Wrapper on Windows
+# Using Maven Wrapper (Windows)
 .\mvnw.cmd spring-boot:run
-# OR using Maven Wrapper on Linux/Mac
+
+# Using Maven Wrapper (Linux / macOS)
 ./mvnw spring-boot:run
+
+# OR using local Maven install
+mvn clean spring-boot:run
 ```
+> 🌐 **Backend API Service**: Runs at `http://localhost:8080`
 
-**Backend will be available at:** `http://localhost:8080`
-
-**API Documentation:** `http://localhost:8080/swagger-ui.html` (if Swagger is configured)
-
-### 3️⃣ Setup Frontend (React + Vite)
-
+### 3️⃣ Launch Frontend (React + Vite)
 ```bash
-# Install dependencies
+# Install NPM dependencies
 npm install
 
-# Start development server
+# Start Vite development server
 npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
-
-# Run linter
-npm run lint
 ```
-
-**Frontend will be available at:** `http://localhost:5173`
+> 🌐 **Frontend Application**: Runs at `http://localhost:5173`
 
 ---
 
-## 🔑 Demo Credentials
+## 🏗️ Architecture & Workflow
 
-Access the system using these predefined accounts:
+### Tiered Approval Pipeline
 
-| Role | Email | Password | Dashboard |
-|------|-------|----------|-----------|
-| 👨‍💼 **Admin** | `admin@gov.in` | `Password@123` | /admin |
-| 🔍 **Field Officer** | `field.officer@gov.in` | `Password@123` | /field-officer |
-| 📋 **District Officer** | `district.officer@gov.in` | `Password@123` | /district-officer |
-| 💵 **Finance Officer** | `finance.officer@gov.in` | `Password@123` | /finance-officer |
-| 👤 **Beneficiary** | `citizen@gov.in` | `Password@123` | /dashboard |
+```
+  ┌───────────────────────────┐
+  │  1. Beneficiary           │  Submits Subsidy Application & Uploads Documents
+  └─────────────┬─────────────┘
+                │
+                ▼
+  ┌───────────────────────────┐
+  │  2. Field Officer         │  Conducts Level 1 Ground Verification & Report
+  └─────────────┬─────────────┘
+                │
+                ▼
+  ┌───────────────────────────┐
+  │  3. District Officer      │  Performs Level 2 Secondary Administrative Scrutiny
+  └─────────────┬─────────────┘
+                │
+                ▼
+  ┌───────────────────────────┐
+  │  4. Finance Officer       │  Executes Level 3 Financial Approval & Disbursement
+  └─────────────┬─────────────┘
+                │
+                ▼
+  ┌───────────────────────────┐
+  │  5. Beneficiary Account   │  Disbursement Complete & Final Status Updated
+  └───────────────────────────┘
+```
 
 ---
 
-## 📁 Project Structure
+## 📁 Repository Structure
 
-```
-govt-subsidy-g2/
+```text
+Govt-Subsidy/
+├── 📄 Backend_Documentation.docx    # Detailed Backend Architecture Specification
+├── 📄 Frontend_Documentation.docx   # Detailed Frontend Technical Specification
+├── 📄 README.md                     # Project Master Documentation
+├── 📄 schema.sql                    # SQL Database Schemas & Initial Seed Data
+├── 📄 pom.xml                       # Backend Maven Build Configuration
+├── 📄 package.json                  # Frontend Dependencies & NPM Scripts
+├── 📄 vite.config.js                # Vite Development Server Configuration
+├── 📄 mvnw / mvnw.cmd               # Cross-Platform Maven Wrapper Scripts
+│
 ├── 📁 src/
-│   ├── main/
-│   │   ├── java/com/government/subsidy/
-│   │   │   ├── config/              # Spring Boot Configuration & Initialization
-│   │   │   ├── controller/          # REST API Endpoints (Auth, Application, Scheme)
-│   │   │   ├── dto/                 # Data Transfer Objects
-│   │   │   ├── model/               # JPA Entities (User, Application, Scheme)
-│   │   │   ├── repository/          # Spring Data JPA Repositories
-│   │   │   ├── security/            # JWT & Security Configuration
-│   │   │   ├── service/             # Business Logic Layer
-│   │   │   └── exception/           # Custom Exception Handling
-│   │   └── resources/               # application.properties, schema.sql
-│   ├── test/                        # Unit & Integration Tests
-│   └── webapp/                      # Frontend React Application
-│       ├── 📁 components/           # Reusable UI Components (Navbar, Sidebar, Footer)
-│       ├── 📁 pages/                # Page Components (Login, Dashboard, Apply)
-│       ├── 📁 services/             # API Integration Services
-│       ├── 📁 layouts/              # Layout Components
-│       ├── 📁 styles/               # CSS Stylesheets
-│       ├── index.html               # HTML Entry Point
-│       ├── package.json             # npm Dependencies
-│       └── vite.config.js           # Vite Configuration
-├── 📁 docs/                         # Documentation & Architecture Diagrams
-│   ├── FRONTEND_DOCUMENTATION.md    # Frontend Technical Specification
-│   ├── BACKEND_DOCUMENTATION.md     # Backend Technical Specification
-│   └── Agile\ Documentation.md      # Agile & Project Planning
-├── pom.xml                          # Maven Build Configuration
-├── schema.sql                       # Database Schema
-├── mvnw / mvnw.cmd                  # Maven Wrapper
-└── README.md                        # This file
+│   ├── 📁 main/
+│   │   ├── 📁 java/com/government/subsidy/
+│   │   │   ├── 📁 controller/      # REST API Controllers (Auth, App, Scheme)
+│   │   │   ├── 📁 dto/             # Data Transfer Objects (Requests/Responses)
+│   │   │   ├── 📁 model/           # JPA Entities (User, Application, Scheme)
+│   │   │   ├── 📁 repository/      # Spring Data JPA Repositories
+│   │   │   ├── 📁 security/        # JWT Authentication Filters & WebSecurity
+│   │   │   ├── 📁 service/         # Core Business Logic Layer
+│   │   │   └── 📁 exception/       # Global Controller Exception Handlers
+│   │   └── 📁 resources/           # Application Properties & Data Schemas
+│   │
+│   ├── 📁 test/                    # Backend Unit & Integration Tests
+│   │
+│   ├── 📁 components/              # Reusable UI Components (Navbar, Sidebar, Footer)
+│   ├── 📁 pages/                   # Role Dashboards & Main Application Pages
+│   ├── 📁 services/                # Axios / Fetch API Integration Layer
+│   ├── 📁 layouts/                 # Page Layout Wrappers
+│   └── 📁 styles/                  # Modular Component CSS Stylesheets
 ```
 
 ---
 
-## 🏗️ Architecture
-
-### System Architecture
-```
-┌─────────────────────┐
-│   Web Browser       │
-│  (React 19 + Vite)  │
-└──────────┬──────────┘
-           │ HTTP/REST
-           ▼
-┌─────────────────────────────────────┐
-│   Frontend Application              │
-│  ├─ Pages (Dashboard, Apply, etc)   │
-│  ├─ Components (UI Elements)        │
-│  ├─ Services (API Integration)      │
-│  └─ Styles (CSS)                    │
-└──────────┬──────────────────────────┘
-           │ JSON/REST
-           ▼
-┌─────────────────────────────────────┐
-│   Spring Boot Backend (8080)        │
-│  ├─ Controllers                     │
-│  ├─ Services                        │
-│  ├─ Repositories (JPA)              │
-│  └─ Security (JWT)                  │
-└──────────┬──────────────────────────┘
-           │ SQL
-           ▼
-┌─────────────────────┐
-│   Database (H2/MySQL)   │
-│  • Users            │
-│  • Applications     │
-│  • Schemes          │
-│  • Workflow History │
-└─────────────────────┘
-```
-
-### Workflow Layers
-```
-1. BENEFICIARY SUBMISSION
-   ↓
-2. FIELD OFFICER VERIFICATION (Level 1)
-   ↓
-3. DISTRICT OFFICER REVIEW (Level 2)
-   ↓
-4. FINANCE OFFICER APPROVAL (Level 3)
-   ↓
-5. DISBURSEMENT PROCESSING
-```
-
----
-
-## 📡 API Documentation
+## 📡 API Reference Summary
 
 ### Base URL
-```
-http://localhost:8080/api/v1
-```
+`http://localhost:8080/api/v1`
 
-### Authentication Endpoints
+### 🔑 Authentication Endpoints
+* **`POST /api/v1/auth/login`**: Authenticate user & receive JWT token.
+* **`POST /api/v1/auth/signup`**: Register a new citizen/beneficiary account.
 
-#### Login
-```http
-POST /api/v1/auth/login
-Content-Type: application/json
+### 📝 Application Endpoints
+* **`POST /api/v1/applications/submit`**: Submit a new subsidy application.
+* **`GET /api/v1/applications/my-applications`**: Fetch logged-in user's applications.
+* **`GET /api/v1/applications/{id}`**: Retrieve detailed application details & status.
 
-{
-  "email": "admin@gov.in",
-  "password": "Password@123"
-}
-```
-
-Response:
-```json
-{
-  "token": "eyJhbGciOiJIUzI1NiJ9...",
-  "type": "Bearer",
-  "userId": 1,
-  "email": "admin@gov.in",
-  "role": "ADMIN"
-}
-```
-
-#### Register
-```http
-POST /api/v1/auth/signup
-Content-Type: application/json
-
-{
-  "email": "newuser@gov.in",
-  "password": "Password@123",
-  "fullName": "John Doe",
-  "phoneNumber": "9876543210"
-}
-```
-
-### Application Endpoints
-
-#### Submit Application
-```http
-POST /api/v1/applications/submit
-Authorization: Bearer {token}
-Content-Type: application/json
-
-{
-  "schemeId": 1,
-  "incomeCategory": "LOW",
-  "aadhaarNumber": "123456789012"
-}
-```
-
-#### Get My Applications
-```http
-GET /api/v1/applications/my-applications
-Authorization: Bearer {token}
-```
-
-#### Get Application by ID
-```http
-GET /api/v1/applications/{applicationId}
-Authorization: Bearer {token}
-```
-
-### Scheme Endpoints
-
-#### Get All Schemes
-```http
-GET /api/v1/schemes
-```
-
-#### Get Scheme Details
-```http
-GET /api/v1/schemes/{schemeId}
-```
-
-#### Create Scheme (Admin Only)
-```http
-POST /api/v1/schemes
-Authorization: Bearer {token}
-Content-Type: application/json
-```
-
-For complete API documentation, refer to [BACKEND_DOCUMENTATION.md](docs/Backend%20Documentation.md)
+### 🏛️ Scheme Endpoints
+* **`GET /api/v1/schemes`**: Fetch list of active government subsidy schemes.
+* **`GET /api/v1/schemes/{id}`**: Fetch details and eligibility criteria for a scheme.
+* **`POST /api/v1/schemes`**: Create a new subsidy scheme *(Admin restricted)*.
 
 ---
 
 ## 🧪 Testing
 
-### Run Backend Tests
+### Run Backend Unit & Integration Tests
 ```bash
-# Run all tests
 mvn test
-
-# Run specific test class
-mvn test -Dtest=ApplicationServiceTest
-
-# Run with coverage
-mvn test jacoco:report
 ```
 
-### Run Frontend Tests
+### Run Specific Test Suite
 ```bash
-# Run with Vitest (when configured)
-npm run test
-
-# Run with coverage
-npm run test:coverage
+mvn test -Dtest=GlobalExceptionHandlerTest
 ```
-
-Current test coverage:
-- ✅ 18+ Integration Tests (Backend)
-- ✅ Authentication & Authorization Tests
-- ✅ Application Workflow Tests
-- ✅ Exception Handling Tests
-
----
-
-## 🔧 Configuration
-
-### Backend Configuration (application.properties)
-```properties
-# Server Port
-server.port=8080
-
-# Database Configuration
-spring.datasource.url=jdbc:h2:mem:testdb
-spring.datasource.driver-class-name=org.h2.Driver
-spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
-
-# JWT Configuration
-jwt.secret=your-secret-key-here
-jwt.expiration=86400000
-
-# Logging
-logging.level.com.government.subsidy=DEBUG
-```
-
-### Frontend Configuration (.env)
-```
-VITE_API_BASE_URL=http://localhost:8080/api/v1
-VITE_APP_NAME=Government Subsidy Tracking
-```
-
----
-
-## 🚢 Deployment
-
-### Docker Deployment (Optional)
-
-Create `Dockerfile` for backend:
-```dockerfile
-FROM openjdk:17-jdk-slim
-COPY target/*.jar app.jar
-ENTRYPOINT ["java", "-jar", "app.jar"]
-```
-
-Build and run:
-```bash
-docker build -t govt-subsidy-backend .
-docker run -p 8080:8080 govt-subsidy-backend
-```
-
----
-
-## 🤝 Contributing
-
-We welcome contributions! Please follow these steps:
-
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
-3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
-4. **Push** to the branch (`git push origin feature/amazing-feature`)
-5. **Open** a Pull Request
-
-### Development Guidelines
-- Follow Spring Boot and React best practices
-- Add tests for new features
-- Update documentation accordingly
-- Ensure code passes linting checks
 
 ---
 
 ## 📝 License
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 📚 Additional Documentation
-
-- [Frontend Technical Specification](docs/Frontend%20Documentation.md)
-- [Backend Technical Specification](docs/Backend%20Documentation.md)
-- [Agile & Project Planning](docs/Agile%20Documentation.md)
-- [Database Schema](schema.sql)
-
----
-
-## 💬 Support & Contact
-
-For questions, issues, or feedback:
-
-- 📧 **Email**: support@govsubsidy.in
-- 🐛 **Report Issues**: [GitHub Issues](https://github.com/yourusername/govt-subsidy-g2/issues)
-- 💡 **Suggestions**: Create a discussion thread
-
----
-
-## 🙏 Acknowledgments
-
-- Spring Boot Framework Team
-- React Core Team
-- Government of India (for the use case)
-- All contributors and maintainers
-
----
+Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for details.
 
 <div align="center">
 
-**[⬆ Back to Top](#-government-subsidy--grant-disbursement-tracking-system)**
-
-Built with ❤️ for transparent government processes
+---
+**[⬆ Back to Top](#-digital-subsidy--grant-administration-platform)**
 
 </div>
