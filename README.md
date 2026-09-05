@@ -11,11 +11,12 @@
 [![React](https://img.shields.io/badge/React-19.2.7-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-8.1.1-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Security](https://img.shields.io/badge/Spring_Security-JWT-005F87?style=for-the-badge&logo=jsonwebtokens&logoColor=white)](https://jwt.io/)
+[![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)](https://github.com/Shaik-Shafi-01/Govt-Subsidy)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
 <br />
 
-[Features](#-key-features) • [Tech Stack](#-tech-stack) • [Quick Start](#-quick-start) • [Role Portals](#-role-portals--demo-credentials) • [Architecture](#-architecture) • [API Reference](#-api-reference)
+[Overview](#-overview) • [Features](#-key-features) • [Tech Stack](#-tech-stack) • [Quick Start](#-quick-start) • [Role Portals](#-role-portals--demo-credentials) • [Architecture](#-architecture) • [API Reference](#-api-reference)
 
 ---
 
