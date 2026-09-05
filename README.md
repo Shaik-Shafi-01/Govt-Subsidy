@@ -1,27 +1,17 @@
-<div align="center">
-
 # 🏛️ Digital Subsidy & Grant Administration Platform
 
-<p align="center">
-  <b>A Transparent, Multi-Tier Government Subsidy Management & Beneficiary Tracking System</b>
-</p>
-
-[![Java 17](https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.java.com/)
-[![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.2.0-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
-[![React](https://img.shields.io/badge/React-19.2.7-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
-[![Vite](https://img.shields.io/badge/Vite-8.1.1-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Security](https://img.shields.io/badge/Spring_Security-JWT-005F87?style=for-the-badge&logo=jsonwebtokens&logoColor=white)](https://jwt.io/)
-
-[![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)](https://github.com/Shaik-Shafi-01/Govt-Subsidy)
-[![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
-
-<br />
-
-[Overview](#-overview) • [Features](#-key-features) • [Tech Stack](#-tech-stack) • [Quick Start](#-quick-start) • [Role Portals](#-role-portals--demo-credentials) • [Architecture](#-architecture) • [API Reference](#-api-reference)
+> **A Transparent, Multi-Tier Government Subsidy Management & Beneficiary Tracking System**
+>
+> ☕ **Backend Stack**: Java 17 • Spring Boot 3.2.0 • Spring Security JWT  
+> ⚛️ **Frontend Stack**: React 19.2.7 • Vite 8.1.1 • Modern CSS3  
+> 🛡️ **Status**: `Active` • **License**: `MIT`
 
 ---
 
-</div>
+### 📍 Quick Navigation
+[`Overview`](#-overview) • [`Key Features`](#-key-features) • [`Tech Stack`](#-tech-stack) • [`Demo Accounts`](#-role-portals--demo-credentials) • [`Quick Start`](#-quick-start) • [`Architecture`](#-architecture) • [`API Reference`](#-api-reference)
+
+---
 
 ## 📋 Overview
 
